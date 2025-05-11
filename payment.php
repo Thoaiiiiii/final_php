@@ -162,15 +162,31 @@
 
       $sql = "INSERT INTO Payment(OrderID, PaymentDate)
         VALUES($orderid, CURRENT_TIME)";
-      $conn->conn()->query($sql) or die($conn->error);
+      $result = $conn->conn()->query($sql);
+
+      if (!$result) {
+          die("Query failed: " . $conn->conn()->error);
+      }
+
+      // update oder
+      $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = ?";
+      $stmt = $conn->conn()->prepare($sql);
+      $stmt->bind_param("i", $orderid); // i : integer
+      $stmt->execute() or die($conn->conn()->error);
+
+      // insert new order
+      $sql = "INSERT INTO Orders(MemberID, CartFlag) VALUES(?, 1)";
+      $stmt = $conn->conn()->prepare($sql);
+      $stmt->bind_param("i", $memberID);
+      $stmt->execute() or die($conn->conn()->error);
 
 
-      $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = $orderid";
-      $conn->conn()->query($sql) or die($conn->error);
+      // $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = $orderid";
+      // $conn->conn()->query($sql) or die($conn->error);
 
-      $sql = "INSERT INTO Orders(MemberID, CartFlag)
-        VALUES($memberID, 1)";
-      $conn->conn()->query($sql) or die($conn->error);
+      // $sql = "INSERT INTO Orders(MemberID, CartFlag)
+      //   VALUES($memberID, 1)";
+      // $conn->conn()->query($sql) or die($conn->error);
       
       echo("<script>location.href = 'payment_done.php';</script>");
       exit();

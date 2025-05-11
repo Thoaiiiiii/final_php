@@ -24,7 +24,7 @@
         </div>
         <div class="row">
           <button type="submit" name="submit" class="btn" style="margin-left: 10px">Login</button>
-          <!-- <button type="button" id="faceid-login" class="btn" style="margin-left: 10px;">Login with FaceID</button> -->
+          <button type="button" id="faceid-login" class="btn" style="margin-left: 10px;">Login with FaceID</button>
         </div>
         <div class="row">
           <span class="white-text">Not yet a member?</span>
@@ -52,7 +52,7 @@
   </div>
 </form>
 <!-- login bằng qr thông qua google passkey -->
-<!-- <script>
+<script>
   document.getElementById('faceid-login').addEventListener('click', async() => {
     try {
       // gửi yêu cầu xác thực sinh trắc học
@@ -85,6 +85,7 @@
       alert('FaceID login failed. Please try again.');
     }
   });
-</script> -->
+</script>
+
 <?php include "footer.php"; ?>
 </html>
