@@ -123,6 +123,7 @@
 </body>
 
 <?php
+
   function EmptyInputPayment($name, $number, $month, $year, $cvv, $address, $phone, $state, $zip)
   { return empty($name) || (empty($number)) || (empty($month)) || (empty($year)) || (empty($cvv)) 
     || (empty($address)) || (empty($phone)) || (empty($state)) || (empty($zip)); }
@@ -181,12 +182,12 @@
       $stmt->execute() or die($conn->conn()->error);
 
 
-      // $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = $orderid";
-      // $conn->conn()->query($sql) or die($conn->error);
+      $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = $orderid";
+      $conn->conn()->query($sql) or die($conn->conn()->error);
 
-      // $sql = "INSERT INTO Orders(MemberID, CartFlag)
-      //   VALUES($memberID, 1)";
-      // $conn->conn()->query($sql) or die($conn->error);
+      $sql = "INSERT INTO Orders(MemberID, CartFlag)
+        VALUES($memberID, 1)";
+      $conn->conn()->query($sql) or die($conn->conn()->error);
       
       echo("<script>location.href = 'payment_done.php';</script>");
       exit();
