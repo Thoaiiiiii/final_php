@@ -5,8 +5,6 @@
         $storedCredential = getUserCredentialFromDB($data['credential']);
 
         function getUserCredentialFromDB($credential) {
-            // Simulate fetching user credential from the database
-            // Replace this with actual database query logic
             return 'stored_credential_example';
         }
 
