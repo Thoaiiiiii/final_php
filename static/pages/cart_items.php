@@ -48,7 +48,7 @@
           {
             $orderItem = $cartItems[$c];
             $item = new Item($orderItem->getItemID());
-            generateItem($item, $orderItem, $memberID);
+            generateItem($item, $orderItem, $memberID);//render giao diện cho item
 
             $quantity = $orderItem->getQuantity();
             $price = $orderItem->getPrice();
@@ -70,7 +70,7 @@
                 
                 if ($sumTotal >= 200){
                   $displayShipping = 0;
-                  $displaySVoucher = " <span class='yellow-text'>(Shipping voucher applied)</span>";
+                  $displaySVoucher = " <span class='yellow-text'>(Giao hàng miễn phí)</span>";
                 }
                 else if ($sumTotal < 200){
                   $displayShipping = 25;
@@ -81,7 +81,7 @@
 
                 if ($sumTotal >= 2000){
                   $shippingTotal = $sumTotal - 100;
-                  $displayPVoucher = "<span class='underline'>-RM100</span> <span class='yellow-text'>(Promo voucher applied)</span>";
+                  $displayPVoucher = "<span class='underline'>-RM100</span> <span class='yellow-text'>(Voucher giảm giá 200K)</span>";
                 }
                 else if ($sumTotal >= 200 && $sumTotal < 2000){ 
                   $shippingTotal = $sumTotal;
@@ -89,7 +89,7 @@
                 }
                 else if ($sumTotal < 200){ 
                   $shippingTotal = $sumTotal + 25;
-                  $displayPVoucher = "None (min spend not reached)";
+                  $displayPVoucher = "None";
                 }
                 $sumTotal = number_format($shippingTotal, 2);
 
