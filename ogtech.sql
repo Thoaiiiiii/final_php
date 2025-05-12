@@ -3,8 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2022 at 11:12 AM
--- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -111,8 +109,9 @@ INSERT INTO `members` (`MemberID`, `Username`, `Password`, `Email`, `PrivilegeLe
 (15, 'test7', '$2y$10$wYZtt0RY/443JBq5UO0iGuDbUia/lIEWI0/iSGrDJ4Yrv3WpD5J1.', 'test7@gmail.com', 0, 3, '2025-05-12'),
 (16, 'test8', '$2y$10$qYaWx7z6VHxgBtQxLm7leuo2sKv76Cg28UhmJaKZiF0eHXiMMcKCa', 'test8@gmail.com', 0, 3, '2025-05-12'),
 (19, 'test9', '$2y$10$VDEN6GE/49oMJ6GIwCL/2Op6K6iTeuZbbf7QFn8Oj7WTPzTG3E2Nq', 'test9@gmail.com', 0, 3, '2025-05-12'),
-(22, 'admin2', '$2y$10$4DtSUM142G/dEiZOfO2xS.1VptEJ0rzRh1AFM6EH/Wf.1MediuCUm', 'admin@mail.com', 1, 3, '2025-05-12');
-
+(22, 'admin2', '$2y$10$4DtSUM142G/dEiZOfO2xS.1VptEJ0rzRh1AFM6EH/Wf.1MediuCUm', 'admin@mail.com', 1, 3, '2025-05-12'),
+(23, 'admin01', '$2y$10$fpN70gFKWeo5WKTg19nbu.qd6yj4pzr/pDkt01JjNlioY6tQGKV/C', 'admin01@gmail.com', 1, 3, '2025-05-12'),
+(24, 'user01', '$2y$10$Fhlm1z7vQxQjkNtV.EsM2.xKWH6Y2mBt3OHZXmXCluQeXrE.GpixK', 'user01@gmail.com', 0, 3, '2025-05-12');
 -- --------------------------------------------------------
 
 --
@@ -136,13 +135,13 @@ CREATE TABLE `orderitems` (
 --
 
 INSERT INTO `orderitems` (`OrderItemID`, `OrderID`, `ItemID`, `Price`, `Quantity`, `AddedDatetime`, `Feedback`, `Rating`, `RatingDateTime`) VALUES
-(37, 24, 3, 6950, 1, '2025-05-12 00:43:58', 'Best PC that i ever purchased. Thanks OGTECH for your service.', 5, '2025-05-12 19:36:36'),
-(56, 28, 3, 6950, 1, '2025-05-12 23:49:08', 'The PC is good as its name, best price to performance PC. The GPU is TOP 10 currently for best price to performance. Anyways, good service must buy from this shop.', 5, '2022-03-14 00:35:25'),
-(57, 28, 5, 8668, 1, '2025-05-12 23:49:39', 'EZ KATKA. GOOD SERVICE. BEST VALUE. KING OF PC. THANKS OGTECH', 5, '2025-05-12 00:35:51'),
-(58, 28, 6, 4599, 1, '2025-05-12 23:49:45', 'Best value PC ever. Thanks OGTECH for the good service and good parts and good prices. Everything works fine.', 5, '2025-05-12 00:36:24'),
-(59, 28, 10, 3299, 1, '2025-05-12 23:52:19', 'Best entry PC. 3050 basically can run cyberpunk is max settings 1080p 60fps lol. Thanks OGTECH', 5, '2025-05-12 00:37:06'),
-(60, 28, 35, 719.99, 2, '2025-05-12 23:53:25', 'No deadpixel or dead color. Good service and fast delivery. Thanks OGTECH', 5, '2025-05-12 00:37:51'),
-(61, 29, 3, 6950, 1, '2025-05-12 11:07:27', 'Shipping is a bit late due to Chinese New Year. Minus one star for that, while everything else is okay. Thanks OGTECH', 4, '2025-05-12 11:08:40');
+(37, 24, 3, 42000000, 1, '2025-05-12 00:43:58', 'Best PC that i ever purchased. Thanks OGTECH for your service.', 5, '2025-05-12 19:36:36'),
+(56, 28, 3, 42000000, 1, '2025-05-12 23:49:08', 'The PC is good as its name, best price to performance PC. The GPU is TOP 10 currently for best price to performance. Anyways, good service must buy from this shop.', 5, '2025-03-14 00:35:25'),
+(57, 28, 5, 28000000, 1, '2025-05-12 23:49:39', 'EZ KATKA. GOOD SERVICE. BEST VALUE. KING OF PC. THANKS OGTECH', 5, '2025-05-12 00:35:51'),
+(58, 28, 6, 20000000, 1, '2025-05-12 23:49:45', 'Best value PC ever. Thanks OGTECH for the good service and good parts and good prices. Everything works fine.', 5, '2025-05-12 00:36:24'),
+(59, 28, 10, 4300000, 1, '2025-05-12 23:52:19', 'Best entry PC. 3050 basically can run cyberpunk is max settings 1080p 60fps lol. Thanks OGTECH', 5, '2025-05-12 00:37:06'),
+(60, 28, 35, 4300000, 2, '2025-05-12 23:53:25', 'No deadpixel or dead color. Good service and fast delivery. Thanks OGTECH', 5, '2025-05-12 00:37:51'),
+(61, 29, 3, 42000000, 1, '2025-05-12 11:07:27', 'Shipping is a bit late due to Chinese New Year. Minus one star for that, while everything else is okay. Thanks OGTECH', 4, '2025-05-12 11:08:40');
 
 -- --------------------------------------------------------
 
