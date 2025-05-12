@@ -84,7 +84,6 @@
           </thead>
           <tbody>
             <?php
-            // Assuming you have a session or database storing cart items
             if (session_status() !== PHP_SESSION_ACTIVE) {
               session_start();
             }
@@ -92,23 +91,36 @@
 
             if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
               foreach ($_SESSION['cart'] as $item) {
-              // Ensure the item has the expected keys
-              $productName = isset($item['name']) ? htmlspecialchars($item['name']) : 'Unknown Product';
-              $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
-              $price = isset($item['price']) ? number_format((float)$item['price'], 2) : '0.00';
-              $itemTotal = number_format($quantity * (float)$item['price'], 2);
-              $total += $quantity * (float)$item['price'];
+                // Fetch item details from the database
+                $itemID = isset($item['id']) ? (int)$item['id'] : 0;
+                $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
 
-              echo "<tr>
-              <td>{$Name}</td>
-              <td>{$quantity}</td>
-              <td>\${$price}</td>
-              <td>\${$itemTotal}</td>
-              </tr>";
+                $query = "SELECT Name, SellingPrice FROM items WHERE ItemID = ?";
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param("i", $itemID);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $productName = htmlspecialchars($row['Name']);
+                $price = number_format((float)$row['SellingPrice'], 2);
+                $itemTotal = number_format($quantity * (float)$row['SellingPrice'], 2);
+                $total += $quantity * (float)$row['SellingPrice'];
+
+                echo "<tr>
+                <td>{$productName}</td>
+                <td>{$quantity}</td>
+                <td>\${$price}</td>
+                <td>\${$itemTotal}</td>
+                </tr>";
+                } else {
+                echo "<tr><td colspan='4' style='text-align: center; color: red;'>Item not found in the database</td></tr>";
+                }
+                }
+              } else {
+                echo "<tr><td colspan='4' style='text-align: center; color: red;'>No items in the cart</td></tr>";
               }
-            } else {
-              echo "<tr><td colspan='4' style='text-align: center; color: red;'>No items in the cart</td></tr>";
-            }
             ?>
             <tr>
             <td colspan="3" style="text-align: right;"><strong>Total:</strong></td>
