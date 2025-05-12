@@ -86,9 +86,9 @@
 
   <div class="section" style="margin-top: 100px;">
     <div class="wide-container">
-      <h3 class="white-text center">BUILT BY ENTHUSIASTS FOR ENTHUSIASTS</h3>
+      <h3 class="white-text center">XÂY DỰNG BỞI NHỮNG NGƯỜI ĐAM MÊ VÌ NHỮNG NGƯỜI ĐAM MÊ</h3>
       <h5 class="white-text center">
-        At <b class="orange-text">Tech PC</b>, We are a team of serious gamers and overclockers with a passion towards customized and fast PCs.
+        Tại <b class="orange-text">Tech PC</b>, chúng tôi là một đội ngũ gồm những người với niềm đam mê mãnh liệt dành cho các hệ thống PC tùy chỉnh và tốc độ cao.
       </h5>
     </div>
   </div>

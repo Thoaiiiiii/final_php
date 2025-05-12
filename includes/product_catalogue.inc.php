@@ -70,7 +70,7 @@
         $image = $item->getImage();
         $name = $item->getName();
         $price = $item->getSellingPrice();
-        $price = "RM" . number_format($price, 2);
+        $price = number_format($price, 0, '','.') . " VND";
 
         $hasReviews = $item->HasReviews();
         $avgRatings = $item->getAvgRatings();

@@ -13,20 +13,18 @@
     <div style="margin:0px;"><h2 class="white-text bold" style="padding-bottom:5px;border-bottom:3px solid red;">About Tech PC</h2></div>
     <div class="grey-text text-lighten-4">
       <p style="margin:0px 150px 0px 150px;font-size:25px;text-align:justify">
-        Tech PC was a Company that selling Computer Component which found by four university student and started its business at Malaysia on 1th January 2022.
-        Our passion towards computers makes us willing to introduce and provide the most advanced and recommeded products to our customers.
-        Besides selling Computer Component, our staff will also provide build guides for those who was new to build their PC. 
-        We will recommend and help you build your perfect PC according to your budget.
-        Tech PC also continuously update prices from dozens of the most popular online retailers to help you to save your money.
+        Tại Tech PC, chúng tôi tin rằng công nghệ không chỉ là công cụ, mà còn là chìa khóa mở ra những tiềm năng mới cho cuộc sống và công việc. 
+        Được thành lập vào năm 2025 bởi một nhóm kỹ sư công nghệ thông tin trẻ, chúng tôi đã và đang không ngừng phát triển để mang đến các giải pháp công nghệ hiện đại, tối ưu và phù hợp với từng nhu cầu cụ thể của khách hàng.
+        Chúng tôi chuyên cung cấp các dịch vụ tư vấn, thiết kế và triển khai hệ thống phần mềm, cũng như các sản phẩm công nghệ hỗ trợ doanh nghiệp chuyển đổi số hiệu quả. 
+        Với đội ngũ kỹ thuật viên tận tâm và giàu kinh nghiệm, Tech PC cam kết đồng hành cùng khách hàng trên từng bước đi, từ ý tưởng đến triển khai thực tế.
       </p>
     </div>
     <div style="margin:0px;"><h2 class="white-text bold" style="padding-bottom:5px;border-bottom:3px solid red;">History of Tech PC</h2></div>
     <div class="grey-text text-lighten-4">
       <p style="margin:0px 150px 0px 150px;font-size:25px;text-align:justify">
-      Early, Tech PC was only a manual store without website and database system, due to the pandamic, the sales had been affected significantly. 
-      Besides, records the information manually using file system was been elaminated in this advanced age. 
-      Therefore, Tech PC Company completely modernize the system from manual system to online system which is a web application system. 
-      However, Tech PC also reserved the old method of selling, which is selling at store, so the customers have two choices of methods to purchase our product. 
+      Năm 2025 đánh dấu một cột mốc quan trọng trong hành trình phát triển của Tech PC.
+      Trong năm này, Tech PC cũng ra mắt nền tảng thương mại điện tử tích hợp AI, giúp khách hàng dễ dàng lựa chọn linh kiện, so sánh giá và nhận tư vấn cấu hình phù hợp với nhu cầu chỉ trong vài phút.
+      Năm 2025 là minh chứng cho cam kết của Tech PC trong việc không ngừng đổi mới, mở rộng và phục vụ khách hàng bằng cả đam mê và công nghệ. 
       </p>
     </div>
   </div>
