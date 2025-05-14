@@ -65,7 +65,7 @@
           <div class="row">
             <div class="input-field">
               <i class="material-icons prefix">home</i>
-              <textarea placeholder="House No, Street, District, Zip, State" id="home"
+              <textarea placeholder="Số nhà, tên đường, quận, thành phố" id="home"
                 class="materialize-textarea white-text"
                 name="address" type="text" class="validate white-text"></textarea>
               <label class="active cyan-text" for="home">Billing Address</label>
@@ -80,12 +80,7 @@
               <label for="phone">Phone number</label>
               <span class="helper-text grey-text" data-error="Invalid Number" data-success="Valid Number"></span>
             </div>
-            <div class="input-field col s4">
-            <i class="material-icons prefix">map</i>
-              <input id="state" type="text" name="state" class="validate white-text">
-              <label for="state">State</label>
-              <span class="helper-text grey-text" data-error="Invalid State" data-success="Valid State"></span>
-            </div>
+
             <div class="input-field col s4">
             <i class="material-icons prefix">place</i>
               <input id="zip" type="text" name="zip" class="validate white-text">
@@ -124,9 +119,9 @@
 
 <?php
 
-  function EmptyInputPayment($name, $number, $month, $year, $cvv, $address, $phone, $state, $zip)
+  function EmptyInputPayment($name, $number, $month, $year, $cvv, $address, $phone, $zip)
   { return empty($name) || (empty($number)) || (empty($month)) || (empty($year)) || (empty($cvv)) 
-    || (empty($address)) || (empty($phone)) || (empty($state)) || (empty($zip)); }
+    || (empty($address)) || (empty($phone)) || (empty($zip)); }
 
   if (isset($_POST["payment"])) 
   {
@@ -137,10 +132,9 @@
     $cvv = $_POST["cvv"];
     $address = $_POST["address"];
     $phone = $_POST["phone"];
-    $state = $_POST["state"];
     $zip = $_POST["zip"];
 
-    if (EmptyInputPayment($name, $number, $month, $year, $cvv, $address, $phone, $state, $zip))
+    if (EmptyInputPayment($name, $number, $month, $year, $cvv, $address, $phone, $zip))
     {
       $orderID = $_GET["order_id"];
       $memberID = $_GET["member_id"];

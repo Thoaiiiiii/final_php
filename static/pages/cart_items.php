@@ -80,8 +80,8 @@
                 else $displayShipping = "$displayShipping VND";
 
                 if ($sumTotal >= 12000000){
-                  $shippingTotal = $sumTotal - 100000;
-                  $displayPVoucher = "<span class='underline'>-100 VND</span> <span class='yellow-text'>(Voucher giảm giá 200K)</span>";
+                  $shippingTotal = $sumTotal - 200000;
+                  $displayPVoucher = "<span class='underline'>- 200000VND</span> <span class='yellow-text'>(Voucher giảm giá 200K)</span>";
                 }
                 else if ($sumTotal >= 1200000 && $sumTotal < 12000000){ 
                   $shippingTotal = $sumTotal;
