@@ -67,35 +67,35 @@
             <tbody>
               <?php
                 
-                if ($sumTotal >= 200){
+                if ($sumTotal >= 1200000){
                   $displayShipping = 0;
                   $displaySVoucher = " <span class='yellow-text'>(Giao hàng miễn phí)</span>";
                 }
-                else if ($sumTotal < 200){
-                  $displayShipping = 25;
+                else if ($sumTotal < 1200000){
+                  $displayShipping = 25000;
                   $displaySVoucher = "";
                 } 
-                if ($displayShipping === 0) $displayShipping = "<span class='underline'>RM$displayShipping</span>";
-                else $displayShipping = "RM$displayShipping";
+                if ($displayShipping === 0) $displayShipping = "<span class='underline'>$displayShipping VND</span>";
+                else $displayShipping = "$displayShipping VND";
 
-                if ($sumTotal >= 2000){
-                  $shippingTotal = $sumTotal - 100;
-                  $displayPVoucher = "<span class='underline'>-RM100</span> <span class='yellow-text'>(Voucher giảm giá 200K)</span>";
+                if ($sumTotal >= 12000000){
+                  $shippingTotal = $sumTotal - 200000;
+                  $displayPVoucher = "<span class='underline'>- 200000VND</span> <span class='yellow-text'>(Voucher giảm giá 200K)</span>";
                 }
-                else if ($sumTotal >= 200 && $sumTotal < 2000){ 
+                else if ($sumTotal >= 1200000 && $sumTotal < 12000000){ 
                   $shippingTotal = $sumTotal;
                   $displayPVoucher = "None (min spend not reached)";
                 }
-                else if ($sumTotal < 200){ 
-                  $shippingTotal = $sumTotal + 25;
+                else if ($sumTotal < 1200000){ 
+                  $shippingTotal = $sumTotal + 25000;
                   $displayPVoucher = "None";
                 }
-                $sumTotal = number_format($shippingTotal, 2);
+                $sumTotal = number_format($shippingTotal, 0, '', '.');
 
                 echo("<tr><th >Total Items:</th><td >$cartItemCount</td></tr>");
                 echo("<tr><th >Delivery Charges:</th><td >");echo("$displayShipping $displaySVoucher</td></tr>");
                 echo("<tr><th >Promo Voucher:</th><td >$displayPVoucher</td></tr>");
-                echo("<tr><th>Sum Total:</th><td>RM$sumTotal</td></tr>");
+                echo("<tr><th>Sum Total:</th><td>$sumTotal  VND</td></tr>");
                 
               ?>
             </tbody>

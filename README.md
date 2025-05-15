@@ -16,7 +16,7 @@
     ```
 2. Điều hướng đến thư mục dự án:
     ```bash
-    cd mvc-ecommerce
+    cd final_php
     ```
 3. Nhập cơ sở dữ liệu:
     - Nhập tệp `ogtech.sql` nằm trong thư mục `database` vào máy chủ MySQL của bạn.

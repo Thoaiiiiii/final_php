@@ -23,7 +23,7 @@ function generateOrderDetails($item, $cartItem){
 
   $dateAdded = $cartItem->getAddedDateTime();
   $price = $cartItem->getPrice();
-  $price = "RM" . $price;
+  $price = $price ." VND";
   $quantity = $cartItem->getQuantity();
   $quantityDisplay = "x" . $quantity;
   $orderItemID = $cartItem->getOrderItemID();
@@ -140,7 +140,7 @@ function generateOrderSum($totalItems, $sumTotal, $displayShipping, $displaySVou
                 <tr><th>Total Items:</th><td class='left'>$totalItems</td></tr>");
                 echo("<tr><th>Delivery Charges:</th><td>");echo("$displayShipping $displaySVoucher</td></tr>");
                 echo("<tr><th >Promo Voucher:</th><td >$displayPVoucher</td></tr>");
-                echo("<tr><th>Sum Total:</th><td>RM$sumTotal</td></tr>");
+                echo("<tr><th>Sum Total:</th><td>$sumTotal VND</td></tr>");
                 echo("<tr><th>Status:</th><td>Shipped (check email for status)</td></tr>
               </tbody>
             </table>

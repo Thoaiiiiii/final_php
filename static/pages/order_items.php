@@ -65,30 +65,30 @@
         $sumTotal += $price * $quantity;
       }
 
-      if ($sumTotal >= 200){
+      if ($sumTotal >= 1200000){
         $displayShipping = 0;
         $displaySVoucher = " <span class='yellow-text'>(Shipping voucher applied)</span>";
       }
-      else if ($sumTotal < 200){
-        $displayShipping = 25;
+      else if ($sumTotal < 1200000){
+        $displayShipping = 25000;
         $displaySVoucher = "";
       } 
-      if ($displayShipping === 0) $displayShipping = "<span class='underline'>RM$displayShipping</span>";
-      else $displayShipping = "RM$displayShipping";
+      if ($displayShipping === 0) $displayShipping = "<span class='underline'>$displayShipping VND</span>";
+      else $displayShipping = "$displayShipping VND";
 
-      if ($sumTotal >= 2000){
-        $shippingTotal = $sumTotal - 100;
-        $displayPVoucher = "<span class='underline'>-RM100</span> <span class='yellow-text'>(Promo voucher applied)</span>";
+      if ($sumTotal >= 12000000){
+        $shippingTotal = $sumTotal - 200000;
+        $displayPVoucher = "<span class='underline'>-200000 VND</span> <span class='yellow-text'>(Promo voucher applied)</span>";
       }
-      else if ($sumTotal >= 200 && $sumTotal < 2000){ 
+      else if ($sumTotal >= 1200000 && $sumTotal < 12000000){ 
         $shippingTotal = $sumTotal;
         $displayPVoucher = "None (min spend not reached)";
       }
-      else if ($sumTotal < 200){ 
-        $shippingTotal = $sumTotal + 25;
+      else if ($sumTotal < 1200000){ 
+        $shippingTotal = $sumTotal + 25000;
         $displayPVoucher = "None (min spend not reached)";
       }
-      $sumTotal = number_format($shippingTotal, 2);
+      $sumTotal = number_format($shippingTotal, 0, '', '.');
 
       echo("</ul></div>");
       generateOrderSum($orderItemCount, $sumTotal, $displayShipping, $displaySVoucher, $displayPVoucher);
