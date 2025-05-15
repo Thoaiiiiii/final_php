@@ -88,13 +88,8 @@
         $shippingTotal = $sumTotal + 25;
         $displayPVoucher = "None (min spend not reached)";
       }
-<<<<<<< Updated upstream
       $sumTotal = number_format($shippingTotal, 2);
 
-      // order items list closing point
-=======
-      $sumTotal = number_format($shippingTotal, 0, '', '.');
->>>>>>> Stashed changes
       echo("</ul></div>");
       generateOrderSum($orderItemCount, $sumTotal, $displayShipping, $displaySVoucher, $displayPVoucher);
       echo("</div>");

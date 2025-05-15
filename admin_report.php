@@ -417,10 +417,7 @@ new Chart("myChart", {
 		}
 	}
 });
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 var date2 = [<?php echo json_encode($date_m3);?>,<?php echo json_encode($date_m2);?>,<?php echo json_encode($date_m1);?>];
 var amt2 = [<?php echo $amt_m3 = number_format((float)$amt_m3, 2, '.', '');?>,<?php echo $amt_m2 = number_format((float)$amt_m2, 2, '.', '');?>,<?php echo $amt_m1 = number_format((float)$amt_m1, 2, '.', '');?>];
 
