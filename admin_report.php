@@ -228,7 +228,7 @@
 			}
 		?>
 		
-		<h4 style="color:white">Total sales of last 7 days: RM<?php echo $data_tot = number_format((float)$data_tot, 2, '.', '');?></h4>
+		<h4 style="color:white">Total sales of last 7 days: <?php echo $data_tot = number_format((float)$data_tot, 0, '.', '');?> VND</h4>
 		<h4 style="color:white">Start Date: <?php echo $date7?></h4>
 		<h4 style="color:white">End Date: <?php echo $date1?></h4>
 	</div>
@@ -288,7 +288,7 @@
 				$month_tot =$row['Amount'];
 			}
 		?>
-		<h4 style="color:white">Total sales of last 90 days: RM<?php echo $month_tot = number_format((float)$month_tot, 2, '.', '');?></h4>
+		<h4 style="color:white">Total sales of last 90 days: <?php echo $month_tot = number_format((float)$month_tot, 0, '.', '');?> VND</h4>
 	</div>
 	<br><br><br>
 	<div class="row" id="product" name="product"></div>
@@ -375,13 +375,13 @@
 	</div>
 </div>
 <script>
-var amt = [<?php echo $amt7 = number_format((float)$amt7, 2, '.', '');?>,
-<?php echo $amt6 = number_format((float)$amt6, 2, '.', '');?>,
-<?php echo $amt5 = number_format((float)$amt5, 2, '.', '');?>,
-<?php echo $amt4 = number_format((float)$amt4, 2, '.', '');?>,
-<?php echo $amt3 = number_format((float)$amt3, 2, '.', '');?>,
-<?php echo $amt2 = number_format((float)$amt2, 2, '.', '');?>,
-<?php echo $amt1 = number_format((float)$amt1, 2, '.', '');?>,];
+var amt = [<?php echo $amt7 = number_format((float)$amt7, 0, '.', '');?>,
+<?php echo $amt6 = number_format((float)$amt6, 0, '.', '');?>,
+<?php echo $amt5 = number_format((float)$amt5, 0, '.', '');?>,
+<?php echo $amt4 = number_format((float)$amt4, 0, '.', '');?>,
+<?php echo $amt3 = number_format((float)$amt3, 0, '.', '');?>,
+<?php echo $amt2 = number_format((float)$amt2, 0, '.', '');?>,
+<?php echo $amt1 = number_format((float)$amt1, 0, '.', '');?>,];
 
 var date = [<?php echo json_encode($date7);?>,<?php echo json_encode($date6);?>,<?php echo json_encode($date5);?>
 ,<?php echo json_encode($date4);?>,<?php echo json_encode($date3);?>,<?php echo json_encode($date2);?>
@@ -431,9 +431,9 @@ new Chart("myChart", {
 		}
 	}
 });
-
+//(float)$amt_m3, 2, '.', ''
 var date2 = [<?php echo json_encode($date_m3);?>,<?php echo json_encode($date_m2);?>,<?php echo json_encode($date_m1);?>];
-var amt2 = [<?php echo $amt_m3 = number_format((float)$amt_m3, 2, '.', '');?>,<?php echo $amt_m2 = number_format((float)$amt_m2, 2, '.', '');?>,<?php echo $amt_m1 = number_format((float)$amt_m1, 2, '.', '');?>];
+var amt2 = [<?php echo $amt_m3 = number_format((float)$amt_m3, 0, '.', '');?>,<?php echo $amt_m2 = number_format((float)$amt_m2, 0, '.', '');?>,<?php echo $amt_m1 = number_format((float)$amt_m1, 0, '.', '');?>];
 
 var xValues_m = date2;
 var yValues_m = amt2;
