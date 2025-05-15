@@ -1,4 +1,4 @@
-# MVC E-Commerce Project Final PHP
+# Project Final PHP
 
 ## Tính năng
 
@@ -12,7 +12,7 @@
 
 1. Sao chép repository:
     ```bash
-    git clone https://github.com/your-username/mvc-ecommerce.git
+    git clone https://github.com/Thoaiiiiii/final_php.git
     ```
 2. Điều hướng đến thư mục dự án:
     ```bash
@@ -25,7 +25,7 @@
     - Đặt dự án vào thư mục `htdocs` của XAMPP và khởi động Apache và MySQL.
 
 5. Truy cập ứng dụng:
-    - Mở trình duyệt và truy cập `http://localhost/mvc-ecommerce`.
+    - Mở trình duyệt và truy cập `http://localhost/final_php`.
 
 ## Đóng góp
 
