@@ -45,9 +45,7 @@
       }
 
       echo("<h5 class='white-text page-title'>#$idx Paid: $paymentDate</h5>");
-      // row starting point
       echo("<div class='row'>");
-      // prev order list starting point
       echo("<div class='col s8'> <ul class='collapsible popout' id='cart'>");
 
       $order = $orders[$i];
@@ -90,14 +88,15 @@
         $shippingTotal = $sumTotal + 25;
         $displayPVoucher = "None (min spend not reached)";
       }
+<<<<<<< Updated upstream
       $sumTotal = number_format($shippingTotal, 2);
 
       // order items list closing point
+=======
+      $sumTotal = number_format($shippingTotal, 0, '', '.');
+>>>>>>> Stashed changes
       echo("</ul></div>");
-
       generateOrderSum($orderItemCount, $sumTotal, $displayShipping, $displaySVoucher, $displayPVoucher);
-
-      // row closing point
       echo("</div>");
     }
   }

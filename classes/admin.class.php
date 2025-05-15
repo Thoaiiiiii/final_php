@@ -1,7 +1,5 @@
 <?php
 
-// This class handles search and display table only
-
 class Admin extends Dbhandler{
 
   protected function adminReviews(){
@@ -90,7 +88,6 @@ class Admin extends Dbhandler{
   }
 
   protected function inspectUser(){
-    // inspect user
     $uid = $_GET["inspect"];
     $sql = "SELECT MemberID, Username, Email, PrivilegeLevel FROM Members WHERE Username = '$uid' ORDER BY Username";
     $result = $this->conn()->query($sql) or die ("Select statement FAILED!");
@@ -122,7 +119,6 @@ class Admin extends Dbhandler{
         echo "<p class='prompt-warning'>Please enter a value</p>";
       else
       {
-        // limited search to prevent page overflow
         $sql = "SELECT ItemID, Name, Brand, QuantityInStock FROM Items
           WHERE Brand LIKE '%$searchProduct%' OR Name LIKE '%$searchProduct%' LIMIT 20";
 
@@ -195,7 +191,6 @@ class Admin extends Dbhandler{
   }
 
   protected function inspectProduct(){
-    // inspect product
     $itemID = $_GET["inspect_product"];
     $sql = "SELECT * FROM Items where ItemID = '$itemID' ORDER BY Brand";
     $result = $this->conn()->query($sql) or die("<p> * ItemID error, please try again!</p>");
@@ -278,10 +273,6 @@ class Admin extends Dbhandler{
     if (!isset($searchMember) || $emptyInput->EmptyInputSelect($searchMember))
     {
       $dbh = new Dbhandler();
-
-      // if searchMember is not set or searchMember is empty
-      // only non admin users payment is shown
-
       $sql = "SELECT M.*, O.*, P.* FROM Members M, Orders O, Payment P
         WHERE M.PrivilegeLevel = 0 AND P.OrderID = O.OrderID  AND M.MemberID = O.MemberID ORDER BY P.PaymentDate DESC";
       $result = $dbh->conn()->query($sql) or die($dbh->conn()->error);

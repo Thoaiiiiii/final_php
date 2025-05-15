@@ -90,7 +90,6 @@
 		<canvas id="myChart" style="width:70%"></canvas>
 		</div>
 		
-		<!--result1-->
 		<?php
 			while ($row=mysqli_fetch_array($result1)) {
 		?>
@@ -109,7 +108,6 @@
 		}
 		?>
 		
-		<!--result2-->
 		<?php
 			while ($row=mysqli_fetch_array($result2)) {
 		?>
@@ -128,7 +126,6 @@
 		}
 		?>
 		
-		<!--result3-->
 		<?php
 			while ($row=mysqli_fetch_array($result3)) {
 		?>
@@ -147,7 +144,6 @@
 		}
 		?>
 		
-		<!--result4-->
 		<?php
 			while ($row=mysqli_fetch_array($result4)) {
 		?>
@@ -166,7 +162,6 @@
 		}
 		?>
 		
-		<!--result5-->
 		<?php
 			while ($row=mysqli_fetch_array($result5)) {
 		?>
@@ -185,7 +180,6 @@
 		}
 		?>
 		
-		<!--result6-->
 		<?php
 			while ($row=mysqli_fetch_array($result6)) {
 		?>
@@ -204,7 +198,6 @@
 		}
 		?>
 		
-		<!--result7-->
 		<?php
 			while ($row=mysqli_fetch_array($result7)) {
 		?>
@@ -241,7 +234,6 @@
 		<canvas id="myChart2" style="width:70%"></canvas>
 		</div>
 		
-		<!--result_month1-->
 		<?php
 			while ($row=mysqli_fetch_array($result_month1)) {
 		?>
@@ -255,7 +247,6 @@
 		}
 		?>
 		
-		<!--result_month2-->
 		<?php
 			while ($row=mysqli_fetch_array($result_month2)) {
 		?>
@@ -269,7 +260,6 @@
 		}
 		?>
 		
-		<!--result_month3-->
 		<?php
 			while ($row=mysqli_fetch_array($result_month3)) {
 		?>
@@ -300,7 +290,6 @@
 		<canvas id="myChart3" style="width:70%"></canvas>
 		</div>
 		
-		<!--result_items0-->
 		<?php
 			while ($row=mysqli_fetch_array($result_items0)) {
 				$category0 = "PC Packages";
@@ -312,7 +301,6 @@
 			}
 		?>
 		
-		<!--result_items1-->
 		<?php
 			while ($row=mysqli_fetch_array($result_items1)) {
 				$category1 = "Monitor & Audio";
@@ -324,7 +312,6 @@
 			}
 		?>
 		
-		<!--result_items2-->
 		<?php
 			while ($row=mysqli_fetch_array($result_items2)) {
 				$category2 = "Peripherals";
@@ -364,7 +351,6 @@
 		<canvas id="myChart4" style="width:70%"></canvas>
 		</div>
 		
-		<!--result_user-->
 		<?php
 			while ($row=mysqli_fetch_array($result_user)) {
 				$user = "new sign ups";
@@ -431,7 +417,10 @@ new Chart("myChart", {
 		}
 	}
 });
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 var date2 = [<?php echo json_encode($date_m3);?>,<?php echo json_encode($date_m2);?>,<?php echo json_encode($date_m1);?>];
 var amt2 = [<?php echo $amt_m3 = number_format((float)$amt_m3, 2, '.', '');?>,<?php echo $amt_m2 = number_format((float)$amt_m2, 2, '.', '');?>,<?php echo $amt_m1 = number_format((float)$amt_m1, 2, '.', '');?>];
 

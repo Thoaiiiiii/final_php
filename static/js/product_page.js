@@ -2,7 +2,6 @@ const MAX_QUANTITY = document.getElementById("max-quantity").value;
 const QTY = document.getElementById("qty");
 const SYNC_QTY = document.getElementById("sync-qty");
 
-// add to cart value must not exceed quantity in stock
 function numberChanged()
 {
   QTY.value = Math.max(Math.min(MAX_QUANTITY, QTY.value), 0);

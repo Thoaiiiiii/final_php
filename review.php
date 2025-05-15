@@ -110,7 +110,6 @@
     RATING = document.getElementById("rating");
     STAR_COUNT = STARS.length
     
-    // initial condition of rating (from database)
     for (var i=0; i < RATING.value; i++) 
     {
       document.getElementById(`star${i+1}`).checked = true;

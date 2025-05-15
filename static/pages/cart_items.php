@@ -26,7 +26,6 @@
 <div class="row">
   <div class="col s8">
     <ul class="collapsible popout" id="cart">
-      <!-- generate all rows of items -->
       <?php
         if (isset($cartItems))
         {
@@ -48,7 +47,7 @@
           {
             $orderItem = $cartItems[$c];
             $item = new Item($orderItem->getItemID());
-            generateItem($item, $orderItem, $memberID);//render giao diện cho item
+            generateItem($item, $orderItem, $memberID);
 
             $quantity = $orderItem->getQuantity();
             $price = $orderItem->getPrice();

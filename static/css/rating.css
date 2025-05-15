@@ -1,4 +1,3 @@
-/* product catalogue ratings (static)*/
 .ratings {
   position: relative;
   vertical-align: middle;
@@ -30,7 +29,6 @@
   -webkit-text-stroke: 1px orange;
 }
 
-/* review page ratings (clickable) */
 .rate {
   float: left;
   height: 76px;

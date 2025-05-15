@@ -9,7 +9,6 @@ if (isset($_POST["submit"])) {
 
   $signup = new SignupContr($username, $pwd, $repeatPwd, $email);
 
-  // Running error handlers and user signup 
   $signup->createUser();
   
   header("location: ../signup.php?error=none");

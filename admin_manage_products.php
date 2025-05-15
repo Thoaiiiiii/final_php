@@ -25,7 +25,6 @@
           </th>
           </span>
 
-          <!-- search product input field start -->
           <form action="admin_manage_products.php" method="POST">
             <div class="row" style="margin: 0px;">
               <div class="input-field col s3" style = "color:azure">
@@ -38,9 +37,7 @@
               </div>
             </div>
           </form>
-          <!-- search product input field end -->
-
-          <!-- search product result list start -->
+          
           <form action="" method="GET">
             <table class="responsive-table" id="pagination">
               <thead class="text-primary">
@@ -60,13 +57,10 @@
               <ul class="pagination pager white-text" id="myPager"></ul>
             </div>
           </form>
-          <!-- search product result list end -->
         </div>
       </div>
     </div>
-    <!-- products table end -->
 
-    <!-- selected product details start -->
   <?php if (isset($_GET["inspect_product"])) { ?>
   <div class="rounded-card-parent">
     <div class="card rounded-card">
@@ -90,7 +84,6 @@
     </div>
   </div>
   <?php }
-    // delete product
     if (isset($_GET["delete_product"]))
     {
       $id = $_GET["delete_product"];
@@ -99,9 +92,7 @@
       $dbh->conn()->query($sql) or die ("<p class='red-text'>*Delete statement FAILED!</p>");
     }
   ?>
-  <!-- selected member details end -->
-
-  <!-- create product start -->
+  
   <div class="rounded-card-parent" style="margin-top: 100px">
     <div class="card rounded-card">
       <div class="card-content">
@@ -185,7 +176,6 @@
       </div>
     </div> 
   </div>
-  <!-- create product end -->
   </div>
 </body>
 <script>

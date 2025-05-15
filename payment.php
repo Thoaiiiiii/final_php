@@ -169,13 +169,11 @@
           die("Query failed: " . $conn->conn()->error);
       }
 
-      // update oder
       $sql = "UPDATE Orders SET CartFlag = 0 WHERE OrderID = ?";
       $stmt = $conn->conn()->prepare($sql);
       $stmt->bind_param("i", $orderid); // i : integer
       $stmt->execute() or die($conn->conn()->error);
 
-      // insert new order
       $sql = "INSERT INTO Orders(MemberID, CartFlag) VALUES(?, 1)";
       $stmt = $conn->conn()->prepare($sql);
       $stmt->bind_param("i", $memberID);

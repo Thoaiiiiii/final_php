@@ -9,7 +9,6 @@
     require "header.php"; 
     require_once "includes/class_autoloader.php";
 
-    // database initialization
     $dbinit = new InitDB();
     $dbinit->initDbExec();
   ?>
@@ -207,10 +206,8 @@
 
 <script>
   $(document).ready(function(){
-    // carousel autoswipe
     $('.slider').slider({full_width: true});
 
-    // counter
     $('.count').each(function () 
     {
       $(this).prop('Counter',0).animate({

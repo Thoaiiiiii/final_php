@@ -8,7 +8,6 @@
             return 'stored_credential_example';
         }
 
-        //vertifyFaceID
         if(vertifyFaceID($data['creadential'], $stroredCredential)){
             session_start();
             $_SESSION['user'] = $data['username'];

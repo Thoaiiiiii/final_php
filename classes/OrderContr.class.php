@@ -10,12 +10,10 @@ class OrderContr extends Dbhandler {
     $this->updateOrderItems();
   }
 
-  // update order items related to this order
   protected function updateOrderItems() {
     $sql = "SELECT OrderItemID FROM OrderItems WHERE ORDERID = '$this->orderID'";
     $result = $this->conn()->query($sql) or die($this->conn()->error);
 
-    // create multiple OrderItem instances
     $this->orderItems = array();
     while ($row = $result->fetch_assoc())
       array_push($this->orderItems, new OrderItemContr($row["OrderItemID"]));

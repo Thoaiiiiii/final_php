@@ -81,7 +81,6 @@
 </div>
 
 <script>
-  // auto generate recommended search results based on letter given
   $(document).ready(function(){
     $('input.autocomplete').autocomplete({
       data: {
@@ -104,14 +103,12 @@
     });
   });
 
-  // underline current page
   var path = window.location.pathname;
   var page = path.split("/").pop().split(".")[0];
 
   var links = document.getElementsByClassName(page);
   if (links[0] != null) links[0].classList.add("page_underline");
 
-  // style search bar
   var style = document.getElementById("search-bar");
   style.classList.add("search");
   

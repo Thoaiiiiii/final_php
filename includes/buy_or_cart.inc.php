@@ -1,12 +1,10 @@
 <?php 
 
 function buyOrCart($conn, $quantityInStock, $cartQty, $itemID, $price, $cart){
-  // add into cart if qty in stock is larger than requested quantity
   if ($quantityInStock >= $cartQty){
     if (isset($_SESSION["Member"])) 
     {
       $orderID = $cart->getOrderID();
-      // check if order has been added before
       $sql = "SELECT O.OrderID, O.CartFlag, OI.OrderItemID, OI.OrderID, OI.Quantity FROM Orders O, OrderItems OI 
         WHERE O.OrderID = OI.OrderID AND OI.OrderID = $orderID AND ItemID = $itemID";
 
@@ -16,7 +14,6 @@ function buyOrCart($conn, $quantityInStock, $cartQty, $itemID, $price, $cart){
 
       if ($orderItemID === NULL)
       {
-        // add as new order
         $sql = "INSERT INTO OrderItems(OrderID, ItemID, Price, Quantity, AddedDatetime)
           VALUES ($orderID, $itemID, $price, $cartQty, CURRENT_TIME)";
         $conn->conn()->query($sql) or die($conn->conn()->error);

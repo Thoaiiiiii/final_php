@@ -41,7 +41,6 @@
       $hasReviews = $item->HasReviews();
       $avgRatings = $item->getAvgRatings();
 
-      // set amount of items to add into cart
       $cartQty = 0;
       if (isset($_GET["qty"])) $cartQty = $_GET["qty"];
       
@@ -82,7 +81,6 @@
                 <tbody>
                   <tr><h4 class="white-text"><?php echo($name); ?></h4></tr>
                   <tr>
-                    <!-- product details -->
                     <?php
                       if ($hasReviews)
                       {
@@ -118,7 +116,6 @@
                       }
                       else echo("0 Sold");
                     ?>
-                    <!-- product details end -->
                   </tr>
                   <h4 class="amber-text"><?php echo($displayPrice); ?></h4>
                   <tr><th class='grey-text'>Brand: </th><td><?php echo($brand); ?></td></tr>

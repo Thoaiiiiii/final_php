@@ -13,14 +13,12 @@ class Signup extends Dbhandler {
       exit();
     }
 
-    // get member id
     $sql = "SELECT MemberID FROM Members where Username = '$username';";
     $result = $this->conn()->query($sql) or die("<p>*MemberID error, please try again!</p>");
 
     $row = $result->fetch_assoc();
     $memberID = $row["MemberID"];
 
-    // create cart
     $sql = "INSERT INTO Orders(MemberID) VALUES ($memberID);";
     $this->conn()->query($sql) or die("<p>*Cart creation error, please try again!</p>");
     

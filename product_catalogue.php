@@ -95,7 +95,6 @@
       </div>
 
       <div class="col s9" style="margin-bottom: 80px">
-        <!-- item list start -->
         <?php
           searchItems($category, $brand, $sort);
         ?>
@@ -113,7 +112,6 @@
     sort = document.getElementsByName("sort")[0];
   });
 
-  // dropdown
   var form, category, brand, sort, view;
 
   var categoryBy = {
@@ -144,27 +142,21 @@
 
   function select_category(selectedItem)
   {
-    // get current onclick event index
     var categoryID = categoryBy[selectedItem.textContent];
-    // assign current mapped index and output to url with GET method to handle form
     category.value = categoryID;
     form.submit();
   }
 
   function select_brand(selectedBrand)
   {
-    // get current onclick event index
     var brandID = brandBy[selectedBrand.textContent];
-    // assign current mapped index and output to url with GET method to handle form
     brand.value = brandID;
     form.submit();
   }
 
   function select_sort(selectedSort)
   {
-    // get current onclick event index
     var sortID = sortBy[selectedSort.textContent];
-    // assign current mapped index and output to url with GET method to handle form
     sort.value = sortID;
     form.submit();
   }

@@ -4,8 +4,6 @@ require_once "class_autoloader.php";
 $util = new CommonUtil;
 $dbh = new Dbhandler;
 
-// This page handles admin forms only
-
 function uidExists($username, $email, $util) {
   $sql = "SELECT * FROM Members WHERE Username = ? 
     OR Email = ?;";
@@ -28,7 +26,6 @@ function uidExists($username, $email, $util) {
   $stmt->close();
 }
 
-// Manage User
 if (isset($_POST["submit"]))
 {
   $username = $_POST["username"];
@@ -69,7 +66,6 @@ if (isset($_POST["submit"]))
   echo "<script>document.getElementById('message').innerHTML = 'Added User.';</script>";
 }
 
-// Manage Products
 if (isset($_POST["submit_product"]))
 {
   $name = $_POST["productName"];
@@ -100,8 +96,6 @@ if (isset($_POST["submit_product"]))
   echo "<script>document.getElementById('message').innerHTML = 'Added Product.';</script>";
 }
 
-// Edit products
-// get item id from url and fetch product
 if (isset($_GET['item_id']))
 {
   $itemID = $_GET['item_id'];

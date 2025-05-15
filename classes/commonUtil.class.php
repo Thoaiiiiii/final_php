@@ -44,7 +44,6 @@ class CommonUtil extends Dbhandler{
     $stmt->close();
   }
 
-  // create member
   public function setUser($username, $pwd, $email, $privilegeLevel=0, $attempt=3) {
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
     $sql = "INSERT INTO Members(Username, Password, Email, PrivilegeLevel, Attempt, RegisteredDate)

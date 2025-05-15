@@ -54,7 +54,6 @@
     $itemIdx = 0;
     while ($itemIdx < $itemCount) {
       echo("<div class='row'>");
-      // generate 4 items in one row only (container)
       for ($i=0; $itemIdx < $itemCount && $i < 4; $itemIdx++){
 
         $item = $items[$itemIdx];
@@ -122,7 +121,6 @@
             </a>
           </div>");
       }
-      // closing div tag
       echo("</div>");
     }
   }

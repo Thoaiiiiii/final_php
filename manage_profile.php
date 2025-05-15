@@ -98,7 +98,6 @@
 <?php include "footer.php"; ?>
 
 <script>
-  // disable and enable input fields
   var id =  document.getElementsByName("id")[0];
   var username =  document.getElementsByName("username")[0];
   var email =  document.getElementsByName("email")[0];
@@ -129,7 +128,6 @@ function confirm_edit(btn)
   }
 }
 
-// timed message 
 setTimeout(fade_in, 2500);
 
 function fade_in() {

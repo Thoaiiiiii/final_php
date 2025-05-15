@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <!-- Invoice Section -->
+
   <div id="invoice" style="display: none;">
     <div class="invoice-container">
       <div class="invoice-header">
@@ -91,7 +91,6 @@
 
             if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
               foreach ($_SESSION['cart'] as $item) {
-                // Fetch item details from the database
                 $itemID = isset($item['id']) ? (int)$item['id'] : 0;
                 $quantity = isset($item['quantity']) ? (int)$item['quantity'] : 0;
 

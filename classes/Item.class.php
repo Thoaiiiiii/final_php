@@ -7,6 +7,7 @@ class Item extends Dbhandler{
   private $brand;
   private $description;
   private $category;
+  private $sellingPrice;
   private $quantityInStock;
   private $image;
   

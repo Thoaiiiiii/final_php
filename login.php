@@ -51,19 +51,16 @@
     </div>
   </div>
 </form>
-<!-- login bằng qr thông qua google passkey -->
 <script>
   document.getElementById('faceid-login').addEventListener('click', async() => {
     try {
-      // gửi yêu cầu xác thực sinh trắc học
       const credential = await navigator.credentials.get({
         publicKey: {
-          challenge: new Uint8Array(32), //chanllenge tu server
+          challenge: new Uint8Array(32),
           rpId: window.location.hostname, 
           userVerification: 'required',
         } 
       });
-      // gửi dữ liệu đến server
       const response = await fetch('includes/faceid-login.inc.php', {
         method: 'POST',
         headers: {
@@ -74,10 +71,8 @@
 
       const result = await response.json();
       if(result.success) {
-        // nếu xác thực thành công, chuyển hướng đến trang chính
         window.location.href = 'index.php';
       } else {
-        // nếu xác thực thất bại, hiển thị thông báo lỗi
         alert('FaceID login failed' + result.message);
       }
     } catch (error) {

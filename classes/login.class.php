@@ -25,11 +25,9 @@ class Login extends CommonUtil{
       if ($loginAttempt < 1) {
         header("location: ../login.php?error=attemptReached");
   
-        // wait 30 seconds
         $time = time_sleep_until(time() + 3);
         
         if (time() >= $time) {
-          // resets login attempt
           $updateAttempt = "UPDATE Members SET Attempt = 3 WHERE Username = '$username'";
           $this->conn()->query($updateAttempt) or die("<p>*Unknown Error!</p>");
           $this->conn()->close();

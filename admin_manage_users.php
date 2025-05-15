@@ -15,7 +15,6 @@
   <div class="container" style="margin-top: 150px">
     <h3 class="page-title">Manage Users</h3>
 
-    <!-- users list start -->
     <div class="rounded-card-parent center" style="margin-bottom: 100px">
       <div class="card rounded-card">
         <div class="card-content white-text">
@@ -24,7 +23,6 @@
             </button>
           </span>
 
-          <!-- search member input field start -->
           <form id="search_user" action="admin_manage_users.php" method="POST">
             <div class="row" style="margin: 0px;">
               <div class="input-field col s3" style = "color:azure">
@@ -43,9 +41,6 @@
             </div>
           </form>
 
-          <!-- search member input field end -->
-          
-          <!-- search member result list start -->
           <form action="" method="GET">
             <table class="responsive-table center" id="pagination">
               <thead class="text-primary center">
@@ -66,13 +61,10 @@
               <ul class="pagination pager" id="myPager"></ul>
             </div>
           </form>
-        <!-- serach member result list end -->
         </div>
       </div>
     </div>
-    <!-- users list end -->
-
-    <!-- selected member details start -->
+    
     <?php if (isset($_GET["inspect"])) { ?>
       <div class="rounded-card-parent center">
         <div class="card rounded-card">

@@ -1,11 +1,9 @@
 <?php 
 
-// auto create database tables
 class InitDB extends Dbhandler{
   private function CreateNeededTables() {
     $tables = array();
 
-    //Members table
     array_push(
       $tables, "CREATE TABLE IF NOT EXISTS Members(
         MemberID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -18,7 +16,6 @@ class InitDB extends Dbhandler{
       )"
     );
 
-    // Orders table (display cart (items table) /payment + orderitems tables)
     array_push(
       $tables, "CREATE TABLE IF NOT EXISTS Orders(
         OrderID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -28,7 +25,6 @@ class InitDB extends Dbhandler{
       )"
     );
 
-    // Payment table (payment history)
     array_push(
       $tables, "CREATE TABLE IF NOT EXISTS Payment(
         PaymentID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -38,7 +34,6 @@ class InitDB extends Dbhandler{
       )"
     );
 
-    // Items table
     array_push(
       $tables, "CREATE TABLE IF NOT EXISTS Items(
         ItemID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -52,7 +47,6 @@ class InitDB extends Dbhandler{
       )"
     );
 
-    // OrderItems table
     array_push(
       $tables, "CREATE TABLE IF NOT EXISTS OrderItems(
         OrderItemID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -69,7 +63,6 @@ class InitDB extends Dbhandler{
       )"
     );
 
-    // execute table creation sql one by one
     for ($i=0; $i < count($tables); $i++)
       $this->conn()->query($tables[$i]);
   }

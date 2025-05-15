@@ -12,7 +12,6 @@
   include "static/pages/admin_nav.php";
 ?>
 <body>
-  <!-- manage users -->
   <div class="container" style="margin-top: 150px">
     <h3 class="page-title white-text">View Customers Cart/Orders </h3>
     <div class="row" style="padding-bottom: 10px;">
@@ -62,7 +61,6 @@
       </div>
     </div>
 
-    <!-- view cart/order details selected by admin -->
     <?php if (isset($_GET["view_order"])) { ?>
     <div class="rounded-card-parent">
       <div class="card rounded-card">
@@ -72,7 +70,6 @@
             <?php echo("[".$_GET["username"]."]");?>
           </span>
             <?php
-              // View Selected Customer Cart/Orders 
               if (isset($_GET["view_order"]))
               {
                 $uid = $_GET["view_order"];
