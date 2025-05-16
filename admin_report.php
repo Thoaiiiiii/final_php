@@ -243,7 +243,7 @@
 		if(is_null($amt1)) {
 			$amt_m1 = 0;
 		}
-		$date_m1 = date('Y-m-d',strtotime("- 30 days"));
+		$date_m1 = date('Y-m-d',strtotime("- 0 days"));
 		}
 		?>
 		
@@ -256,7 +256,7 @@
 		if(is_null($amt1)) {
 			$amt_m2 = 0;
 		}
-		$date_m2 = date('Y-m-d',strtotime("- 60 days"));
+		$date_m2 = date('Y-m-d',strtotime("- 30 days"));
 		}
 		?>
 		
@@ -269,7 +269,7 @@
 		if(is_null($amt3)) {
 			$amt_m3 = 0;
 		}
-		$date_m3 = date('Y-m-d',strtotime("- 90 days"));
+		$date_m3 = date('Y-m-d',strtotime("- 60 days"));
 		}
 		?>
 		
